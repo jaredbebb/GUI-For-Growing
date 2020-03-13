@@ -9,8 +9,8 @@ const int TEXT_LEN = 12;
 
 class GrowSensorView{
     private:
-        String screen;
-        boolean buttonEnabled;
+        uint16_t shieldIdentifier;
+        uint16_t FindShieldIdentifier();
 
     public:
         GrowSensorView();
@@ -27,5 +27,6 @@ class GrowSensorView{
         float humidity;
         void SetTemperature(float t);
         void SetHumidity(float h);
+
 
 };
