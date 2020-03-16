@@ -8,6 +8,7 @@
             "includePath": [
                 "d:/Documents/Visual Studio Code/display_temp_humidity_lcd/include",
                 "d:/Documents/Visual Studio Code/display_temp_humidity_lcd/src",
+                "d:/Documents/Visual Studio Code/display_temp_humidity_lcd/lib/View",
                 "d:/Documents/Visual Studio Code/display_temp_humidity_lcd/.pio/libdeps/megaatmega2560/DHT sensor library_ID19",
                 "d:/Documents/Visual Studio Code/display_temp_humidity_lcd/.pio/libdeps/megaatmega2560/Adafruit Unified Sensor_ID31",
                 "d:/Documents/Visual Studio Code/display_temp_humidity_lcd/.pio/libdeps/megaatmega2560/MCUFRIEND_kbv",
@@ -31,6 +32,7 @@
                 "path": [
                     "d:/Documents/Visual Studio Code/display_temp_humidity_lcd/include",
                     "d:/Documents/Visual Studio Code/display_temp_humidity_lcd/src",
+                    "d:/Documents/Visual Studio Code/display_temp_humidity_lcd/lib/View",
                     "d:/Documents/Visual Studio Code/display_temp_humidity_lcd/.pio/libdeps/megaatmega2560/DHT sensor library_ID19",
                     "d:/Documents/Visual Studio Code/display_temp_humidity_lcd/.pio/libdeps/megaatmega2560/Adafruit Unified Sensor_ID31",
                     "d:/Documents/Visual Studio Code/display_temp_humidity_lcd/.pio/libdeps/megaatmega2560/MCUFRIEND_kbv",

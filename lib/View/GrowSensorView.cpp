@@ -41,17 +41,21 @@ void GrowSensorView::Setup(void) {
   Status(F("Setup Screen"));
 }
 
-void GrowSensorView::Loop(){
-  tft.fillScreen(BLACK);
-  tft.setCursor(0, 0);
-  tft.setTextColor(GREEN);    tft.setTextSize(2);
-  tft.print("Humidity: ");
-  tft.print(humidity);
-  tft.println();
-  tft.print("Temp: ");
-  tft.print(temperature);
-  tft.print(" *F");
-  tft.println();
+void GrowSensorView::Display_Temp_Humidity(){
+  if(temp_changed || humidity_changed){
+    tft.fillScreen(BLACK);
+    tft.setCursor(0, 0);
+    tft.setTextColor(GREEN);    
+    tft.setTextSize(2);
+    tft.print("Humidity: ");
+    tft.print(humidity);
+    tft.println();
+    tft.print("Temp: ");
+    tft.print(temperature);
+    tft.print(" *F");
+    tft.println();
+  }
+  else{}
 }
 
 void GrowSensorView::Status(String msg) {
@@ -62,11 +66,27 @@ void GrowSensorView::Status(String msg) {
   tft.print(msg);
 }
 
-void GrowSensorView::SetTemperature(float t){temperature=t;}
-void GrowSensorView::SetHumidity(float h){humidity=h;}
+void GrowSensorView::SetTemperature(float t){
+  if (t != temperature){
+    temperature=t;
+    temp_changed = true;
+  }
+  else{
+    temp_changed = false;
+    }
+  }
+void GrowSensorView::SetHumidity(float h){
+  if(h != humidity){
+    humidity = h;
+    humidity_changed = true;
+  }
+  else{
+    humidity_changed = false;
+  }
+  humidity=h;
+}
 
 uint16_t GrowSensorView::FindShieldIdentifier(){
-  Serial.begin(9600);
   Serial.println(F("TFT LCD test"));
 
   #ifdef USE_Elegoo_SHIELD_PINOUT
